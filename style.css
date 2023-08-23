@@ -15,6 +15,19 @@
   width: 1px;
 }
 
+.flex-container {
+  display: flex;
+  align-content: center;
+  padding: 100px 0;
+}
+
+.headlines-container {
+  max-width: 700px;
+  min-height: 500px;
+  margin: var(--margin-center);
+  text-align: center;
+}
+
 nav .navigation-flex-container {
   min-height: 44px;
   max-width: 1000px;
@@ -47,45 +60,72 @@ nav .navigation-flex-container {
   list-style: none;
 }
 
-section#hero {
-  background-image: url(media/images/tech-website-hero.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 200px 0;
-  max-height: 485px;
+section:not(#hero) {
+  margin: 10px 0;
 }
 
-#hero .hero-flex-container {
-  display: flex;
-  align-content: center;
-  padding: 100px 0;
-}
-
-#hero .hero-text {
-  max-width: 700px;
-  margin: var(--margin-center);
-  text-align: center;
-}
-
-.hero-text h2 {
+.headlines-container h2 {
   font-size: 70px;
   color: #000000;
 }
 
-.hero-text h3 {
+.headlines-container h3 {
   font-size: 35px;
   color: #000000;
 }
 
-.hero-text .shop-now {
-  font-size: 25px;
-  color: #000000;
+.headlines-container .call-to-action-links {
+  /* display: flex;
+  justify-content: space-evenly; */
+  /* flex-wrap: wrap; */
 
   padding: 30px;
 }
 
-section#products {
+.headlines-container .call-to-action-links a {
+  margin: 0 30px;
+  font-size: 25px;
+  color: #06c;
+
+  text-decoration: none;
+}
+
+/* sections */
+
+#hero {
+  background-image: url(media/images/tech-website-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  padding: 100px 0;
+  /* max-height: 888px; */
+}
+
+#highlighted-product1 {
+  background-image: url(media/images/highlighted-laptop.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  padding: 0 0 200px 0;
+  /* max-height: 888px; */
+
+  /* background-color: #fafafa; */
+}
+
+#highlighted-product2 {
+  background-image: url(media/images/highlighted-phones.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  padding: 100px 0;
+  /* max-height: 888px; */
+
+  /* background-color: #f2f2f4; */
+}
+
+#other-products {
   height: 100vh;
 }
