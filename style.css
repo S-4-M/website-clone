@@ -1,3 +1,5 @@
+/* global */
+
 :root {
   --margin-center: 0 auto;
 }
@@ -22,12 +24,40 @@
   padding: 100px 0;
 }
 
-.headlines-container {
+.product-focus {
   max-width: 700px;
   min-height: 500px;
   margin: var(--margin-center);
   text-align: center;
 }
+
+.product-focus h2 {
+  font-size: 70px;
+  color: #000000;
+}
+
+.product-focus h3 {
+  font-size: 35px;
+  color: #000000;
+}
+
+.product-focus .call-to-action-links {
+  /* display: flex;
+  justify-content: space-evenly; */
+  /* flex-wrap: wrap; */
+
+  padding: 30px;
+}
+
+.product-focus .call-to-action-links a {
+  margin: 0 30px;
+  font-size: 25px;
+  color: #06c;
+
+  text-decoration: none;
+}
+
+/* navigation bar */
 
 nav .navigation-flex-container {
   min-height: 44px;
@@ -61,37 +91,11 @@ nav .navigation-flex-container {
   list-style: none;
 }
 
+/* sections */
+
 section:not(#hero) {
   margin: 10px 0;
 }
-
-.headlines-container h2 {
-  font-size: 70px;
-  color: #000000;
-}
-
-.headlines-container h3 {
-  font-size: 35px;
-  color: #000000;
-}
-
-.headlines-container .call-to-action-links {
-  /* display: flex;
-  justify-content: space-evenly; */
-  /* flex-wrap: wrap; */
-
-  padding: 30px;
-}
-
-.headlines-container .call-to-action-links a {
-  margin: 0 30px;
-  font-size: 25px;
-  color: #06c;
-
-  text-decoration: none;
-}
-
-/* sections */
 
 #hero {
   background-image: url(media/images/tech-website-hero.jpg);
