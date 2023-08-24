@@ -17,6 +17,7 @@
 
 .flex-container {
   display: flex;
+  justify-content: center;
   align-content: center;
   padding: 100px 0;
 }
@@ -126,6 +127,30 @@ section:not(#hero) {
   /* background-color: #f2f2f4; */
 }
 
-#other-products {
-  height: 100vh;
+/* #promos {
+} */
+
+#promos .flex-container {
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.promos-item {
+  min-width: 350px;
+  height: 600px;
+  flex: 1 0 calc(50% - 20px);
+  margin: 5px;
+}
+
+.promos-item {
+  min-width: 350px;
+  height: 600px;
+  flex: 1 0 calc(50% - 20px);
+  margin: 5px;
+
+  background-image: url(media/images/11381555_4716287.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
