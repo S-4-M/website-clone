@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* font-family: "Courier New", Courier, monospace; */
 }
 
 .visuall-hidden {
@@ -41,16 +42,22 @@
   color: #000000;
 }
 
-.product-focus .call-to-action-links {
-  /* display: flex;
-  justify-content: space-evenly; */
-  /* flex-wrap: wrap; */
+.product-focus h4 {
+  font-size: 20px;
+  color: #000000;
+}
 
+.product-focus h5 {
+  font-size: 14px;
+  color: #000000;
+}
+
+.product-focus .call-to-action-links {
   padding: 30px;
 }
 
 .product-focus .call-to-action-links a {
-  margin: 0 30px;
+  margin: 0 20px;
   font-size: 25px;
   color: #06c;
 
@@ -145,16 +152,18 @@ section:not(#hero) {
   height: 600px;
   flex: 1 0 calc(50% - 20px);
   margin: 5px;
-}
-
-.promos-item {
-  min-width: 350px;
-  height: 600px;
-  flex: 1 0 calc(50% - 20px);
-  margin: 5px;
 
   background-image: url(media/images/11381555_4716287.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+}
+
+#promos .product-focus {
+  padding: 100px 0;
+}
+
+#promos .product-focus .call-to-action-links a {
+  margin: 0 5px;
+  font-size: 20px;
 }
