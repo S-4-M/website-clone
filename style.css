@@ -53,7 +53,7 @@
 }
 
 .product-focus .call-to-action-links {
-  padding: 30px;
+  padding: 20px;
 }
 
 .product-focus .call-to-action-links a {
@@ -75,8 +75,6 @@ nav .navigation-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* background: #000; */
 }
 
 .logo-container a img {
@@ -104,15 +102,18 @@ section:not(#hero) {
   margin: 10px 0;
 }
 
+/* hero */
+
 #hero {
   background-image: url(media/images/tech-website-hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+
   padding: 100px 0;
-  /* max-height: 888px; */
 }
+
+/* highlights */
 
 #highlighted-product1 {
   background-image: url(media/images/highlighted-laptop.jpg);
@@ -120,118 +121,74 @@ section:not(#hero) {
   background-position: top;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
-  padding: 0 0 200px 0;
-  /* max-height: 888px; */
 
-  /* background-color: #fafafa; */
+  padding: 0 0 200px 0;
 }
 
 #highlighted-product2 {
-  background-image: url(media/images/highlighted-phone.jpg);
+  background-image: url(media/images/highlighted-phones.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
-  padding: 100px 0;
-  /* max-height: 888px; */
 
-  /* background-color: #f2f2f4; */
+  padding: 100px 0;
 }
 
-/* #promos {
-} */
+/* promos */
 
 #promos .flex-container {
   flex-wrap: wrap;
   padding: 0;
   margin: 0 5px;
 }
-
 .promos-item {
+  flex: 1 0 calc(50% - 20px);
+}
+
+.promos-item > div {
   min-width: 350px;
   height: 600px;
-  flex: 1 0 calc(50% - 20px);
   margin: 5px;
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  box-shadow: 0px 0px 4px 0px #eee;
+  border-radius: 5px;
 }
 
 .promos-item #iphone-promo {
-  min-width: 350px;
-  height: 600px;
-  flex: 1 0 calc(50% - 20px);
-  margin: 5px;
-
   background-image: url(media/images/iphone-pro.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .promos-item #macbook-promo {
-  min-width: 350px;
-  height: 600px;
-  flex: 1 0 calc(50% - 20px);
-  margin: 5px;
-
   background-image: url(media/images/macbook-half-open.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .promos-item #ipad-promo {
-  min-width: 350px;
-  height: 600px;
-  flex: 1 0 calc(50% - 20px);
-  margin: 5px;
-
   background-image: url(media/images/ipad-blank.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .promos-item #apple-watch-promo {
-  min-width: 350px;
-  height: 600px;
-  flex: 1 0 calc(50% - 20px);
-  margin: 5px;
-
   background-image: url(media/images/blank-watch.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .promos-item #trade-in-promo {
-  min-width: 350px;
-  height: 600px;
-  flex: 1 0 calc(50% - 20px);
-  margin: 5px;
-
   background-image: url(media/images/apple-boxes.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .promos-item #apple-card-promo {
-  min-width: 350px;
-  height: 600px;
-  flex: 1 0 calc(50% - 20px);
-  margin: 5px;
-
   background-image: url(media/images/applecard.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #promos .product-focus {
-  padding: 100px 0;
+  padding: 165px 0;
+}
+
+#promos .product-focus {
+  text-shadow: 0px 0px 40px white;
 }
 
 #promos .product-focus .call-to-action-links a {
