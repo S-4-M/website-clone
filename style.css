@@ -198,30 +198,102 @@ section:not(#hero) {
 
 /* gallery */
 
-.tv-flex-list {
+.carousel-container {
+  display: inline block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel-flex-list {
   display: flex;
   justify-content: center;
 
-  overflow: hidden;
   list-style: none;
+
+  transform: translateX(0);
+  transition: transform 0s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  /* animation: 10s slide infinite linear; */
 }
 
-.tv-item {
+.carousel-item {
   margin: 0 5px;
 }
 
-.item-content {
+.carousel-content {
   width: 1300px;
   height: 600px;
 
-  background-image: url(media/images/modern-monitor-elegant-table.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.carousel-img1 {
+  background-image: url(media/images/young-beautiful-woman-casual-clothing-sitting-couch-home-interior-holding-remote-watching-tv-with-bucket-popcorn-looking-camera-worried-confused-spending-time-home.jpg);
+}
+
+.carousel-img2 {
+  background-image: url(media/images/man-watching-his-favorite-movie-tv.jpg);
+}
+.carousel-img3 {
+  background-image: url(media/images/multi-ethnic-friends-spending-time-together-looking-entertainment-laptop-talking-about-lifestyle-group-multiracial-people-relaxing-having-fun-chilling-movie-night-hanging-out.jpg);
+}
+
+.carousel-buttons {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+
+#prev-btn {
+  position: absolute;
+  top: -600px;
+
+  padding: 291px 3vw;
+}
+
+#next-btn {
+  position: absolute;
+  top: -600px;
+  right: 0;
+
+  padding: 291px 1vw;
+}
+
 .tablist-container {
   height: 30px;
-  margin: 10px 0;
-  background: #000;
+  margin-bottom: 10px;
+  /* background: #000; */
 }
+
+.tablist-flex-list {
+  max-width: 100px;
+  margin: 0px auto;
+
+  display: flex;
+  justify-content: center;
+
+  list-style: none;
+}
+
+.tablist-item {
+  margin: 0 10px;
+}
+
+.tablist-button {
+  padding: 1px;
+}
+
+/* @keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-70%);
+  }
+} */
