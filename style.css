@@ -248,22 +248,38 @@ section:not(#hero) {
 .carousel-buttons {
   position: relative;
   z-index: 2;
-  opacity: 0.2;
+  opacity: 0.5;
+  top: -600px;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 #prev-btn {
   position: absolute;
-  top: -601px;
+  width: calc(50% - 660px);
+  height: 600px;
 
-  padding: 291px 7%;
+  font-size: 0;
+  background: #eee;
+  border: none;
 }
 
 #next-btn {
   position: absolute;
-  top: -601px;
   right: 0;
 
-  padding: 291px 7vw;
+  font-size: 0;
+  width: calc(50% - 660px);
+  height: 600px;
+
+  background: #eee;
+  border: none;
+}
+
+#play-btn {
+  position: absolute;
+  right: 0;
+  bottom: -620px;
 }
 
 .tablist-container {
@@ -298,3 +314,36 @@ section:not(#hero) {
     transform: translateX(-70%);
   }
 } */
+
+@media only screen and (max-width: 1366px) {
+  .carousel-buttons {
+    opacity: 0.9;
+    top: -340px;
+  }
+
+  #prev-btn {
+    width: 40px;
+    height: 80px;
+    font-size: 40px;
+
+    background: rgba(255, 255, 255, 0);
+  }
+
+  #next-btn {
+    width: 40px;
+    height: 80px;
+    font-size: 40px;
+
+    background: rgba(255, 255, 255, 0);
+  }
+
+  #play-btn {
+    bottom: -360px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links-container {
+    display: none;
+  }
+}

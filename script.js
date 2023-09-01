@@ -5,11 +5,9 @@ const nextBtn = document.querySelector("#next-btn");
 
 prevBtn.addEventListener("click", (event) => {
   updateGallery(event);
-  updateTest();
 });
 nextBtn.addEventListener("click", (event) => {
   updateGallery(event);
-  // updateTest(event);
 });
 
 // const tabList = document.querySelector(".tablist-flex-list");
@@ -22,11 +20,13 @@ const updateGallery = (event) => {
   const firstChild = carousel.firstElementChild;
   const lastChild = carousel.lastElementChild;
 
-  const operator = event.target.innerText;
+  const sign = event.target.innerText;
+  // console.log(sign);
 
   carousel.classList.add("hidden");
   setTimeout(() => {
-    if (operator === "-") {
+    if (sign === "‹") {
+      // bug if press too fast
       carousel.insertBefore(lastChild, carousel.firstChild);
     } else {
       carousel.insertBefore(firstChild, carousel.lastChild);
