@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 100px 0;
+  padding: 140px 0 50px 0;
 }
 
 .product-focus {
@@ -30,20 +30,21 @@
   min-height: 500px;
   margin: var(--margin-center);
   text-align: center;
+  text-shadow: 0px 0px 100px white;
 }
 
 .product-focus h2 {
-  font-size: 70px;
+  font-size: 64px;
   color: #000000;
 }
 
 .product-focus h3 {
-  font-size: 35px;
+  font-size: 38px;
   color: #000000;
 }
 
 .product-focus h4 {
-  font-size: 20px;
+  font-size: 22px;
   color: #000000;
 }
 
@@ -105,9 +106,9 @@ section:not(#hero) {
 /* hero */
 
 #hero {
-  background-image: url(media/images/tech-website-hero.jpg);
+  background-image: url(media/images/hero-products.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 
   padding: 100px 0;
@@ -118,7 +119,7 @@ section:not(#hero) {
 #highlighted-product1 {
   background-image: url(media/images/highlighted-laptop.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
 
@@ -247,22 +248,22 @@ section:not(#hero) {
 .carousel-buttons {
   position: relative;
   z-index: 2;
-  opacity: 0;
+  opacity: 0.2;
 }
 
 #prev-btn {
   position: absolute;
-  top: -600px;
+  top: -601px;
 
-  padding: 291px 3vw;
+  padding: 291px 7%;
 }
 
 #next-btn {
   position: absolute;
-  top: -600px;
+  top: -601px;
   right: 0;
 
-  padding: 291px 1vw;
+  padding: 291px 7vw;
 }
 
 .tablist-container {
