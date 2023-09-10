@@ -26,15 +26,25 @@ const updateGallery = (event) => {
   carousel.classList.add("hidden");
   setTimeout(() => {
     if (sign === "‹") {
-      // bug if press too fast
       carousel.insertBefore(lastChild, carousel.firstChild);
     } else {
       carousel.insertBefore(firstChild, carousel.lastChild);
     }
     carousel.classList.remove("hidden");
-  }, 500);
 
-  // update tablist (index to tablist child)
+    updateTabs(carousel);
+  }, 100);
+};
+
+const updateTabs = (carousel) => {
+  const tabList = document.querySelector(".tablist-flex-list");
+  const lastTab = document.querySelector(".current-tab");
+  lastTab.classList.remove("current-tab");
+
+  const currentImgNum = carousel.children[1].children[0].children[0].innerText;
+
+  const currentTab = tabList.children[currentImgNum - 1].children[0];
+  currentTab.classList.add("current-tab");
 };
 
 const playGallery = () => {
@@ -56,7 +66,7 @@ const playGallery = () => {
   // carousel.style.transform = `translateX(${translateX}px)`;
 };
 
-const viewportWidthInPixels = window.innerWidth;
-const valueIn100Vw = viewportWidthInPixels + "px";
-console.log(viewportWidthInPixels);
-console.log(valueIn100Vw);
+// const viewportWidthInPixels = window.innerWidth;
+// const valueIn100Vw = viewportWidthInPixels + "px";
+// console.log(viewportWidthInPixels);
+// console.log(valueIn100Vw);
