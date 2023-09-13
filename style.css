@@ -235,14 +235,23 @@ section:not(#hero) {
 }
 
 .carousel-img1 {
-  background-image: url(media/images/young-beautiful-woman-casual-clothing-sitting-couch-home-interior-holding-remote-watching-tv-with-bucket-popcorn-looking-camera-worried-confused-spending-time-home.jpg);
+  background-image: url(media/images/man-watching-his-favorite-movie-tv.jpg);
 }
 
 .carousel-img2 {
-  background-image: url(media/images/man-watching-his-favorite-movie-tv.jpg);
-}
-.carousel-img3 {
   background-image: url(media/images/multi-ethnic-friends-spending-time-together-looking-entertainment-laptop-talking-about-lifestyle-group-multiracial-people-relaxing-having-fun-chilling-movie-night-hanging-out.jpg);
+}
+
+.carousel-img3 {
+  background-image: url(media/images/modern-monitor-elegant-table.jpg);
+}
+
+.carousel-img4 {
+  background-image: url(media/images/young-beautiful-woman-casual-clothing-sitting-couch-home-interior-holding-remote-watching-tv-with-bucket-popcorn-looking-camera-worried-confused-spending-time-home.jpg);
+}
+
+.carousel-center-fix {
+  transform: translateX(655px);
 }
 
 .carousel-buttons {
@@ -313,7 +322,7 @@ section:not(#hero) {
   font-size: 0;
 }
 
-.current-tab {
+.current-tab > button {
   background-color: #000;
   transition: background-color 0.1s linear;
 }
