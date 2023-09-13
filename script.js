@@ -28,7 +28,7 @@ const createTabs = () => {
 };
 createTabs();
 
-// click on tab change img
+// gallery buttons
 
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
@@ -39,6 +39,8 @@ prevBtn.addEventListener("click", (event) => {
 nextBtn.addEventListener("click", (event) => {
   updateGallery(event);
 });
+
+// updates
 
 const updateGallery = (event) => {
   // update carousel
@@ -51,9 +53,9 @@ const updateGallery = (event) => {
   carousel.classList.add("hidden");
   setTimeout(() => {
     if (sign === "‹") {
-      carousel.insertBefore(lastChild, carousel.firstChild);
-    } else {
-      carousel.insertBefore(firstChild, carousel.lastChild);
+      carousel.insertBefore(lastChild, firstChild);
+    } else if (sign === "›") {
+      carousel.insertBefore(firstChild, lastChild.nextSibling);
     }
     carousel.classList.remove("hidden");
 
@@ -70,6 +72,43 @@ const updateTabs = (carousel) => {
   const currentTab = tabList.children[currentImgNum - 1];
   currentTab.classList.add("current-tab");
 };
+
+// tab buttons
+
+const tabSort = (carousel, idx) => {
+  const items = carousel.getElementsByTagName("li");
+  const itemsArr = Array.from(items);
+
+  itemsArr.sort((a, b) => {
+    const classA = a.children[0].getAttribute("class");
+    const classB = b.children[0].getAttribute("class");
+    const numA = parseInt(classA.match(/\d+/)[0]);
+    const numB = parseInt(classB.match(/\d+/)[0]);
+
+    var positionA = (numA - idx + 4) % 4;
+    var positionB = (numB - idx + 4) % 4;
+
+    return positionA - positionB;
+  });
+
+  carousel.innerHTML = "";
+
+  itemsArr.forEach((item) => {
+    carousel.appendChild(item);
+  });
+  updateTabs(carousel);
+};
+
+const tabsButtons = document.querySelectorAll(".tablist-item");
+tabsButtons.forEach((button, idx) => {
+  button.addEventListener("click", (event) => {
+    carousel.classList.add("hidden");
+    setTimeout(() => {
+      tabSort(carousel, idx);
+      carousel.classList.remove("hidden");
+    }, 100);
+  });
+});
 
 const playGallery = () => {
   // let index = 0;
