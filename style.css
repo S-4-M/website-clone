@@ -211,10 +211,16 @@ section:not(#hero) {
 
   list-style: none;
 
-  transform: translateX(0);
-  transition: transform 0s ease-in-out;
-  transition: opacity 0.1s ease-in-out;
+  /* transform: translateX(-1233px); */
+  /* transform: translateX(-2543px); */
+  /* transition: transform 4s ease-in-out; */
+  /* transition: opacity 0.1s ease-in-out; */
   /* animation: 10s slide infinite linear; */
+}
+
+.slide {
+  /* transform: translateX(1000px); */
+  transition: transform 1s ease-in-out;
 }
 
 .carousel-item {
@@ -248,10 +254,6 @@ section:not(#hero) {
 
 .carousel-img4 {
   background-image: url(media/images/young-beautiful-woman-casual-clothing-sitting-couch-home-interior-holding-remote-watching-tv-with-bucket-popcorn-looking-camera-worried-confused-spending-time-home.jpg);
-}
-
-.carousel-center-fix {
-  transform: translateX(655px);
 }
 
 .carousel-buttons {

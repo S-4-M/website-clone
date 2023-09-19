@@ -5,7 +5,7 @@ const tabList = document.querySelector(".tablist-flex-list");
 
 const centerCarousel = () => {
   if (carousel.children.length % 2 === 0) {
-    carousel.classList.add("carousel-center-fix");
+    carousel.style.transform = `translateX(${655}px)`;
   }
 };
 centerCarousel();
@@ -41,6 +41,15 @@ nextBtn.addEventListener("click", (event) => {
 });
 
 // updates
+// fix bugs when change the number of carousel item
+
+let isSliding = false;
+
+const resetTransform = () => {
+  // reset
+  carousel.classList.remove("slide");
+  carousel.style.transform = `translateX(${655}px)`;
+};
 
 const updateGallery = (event) => {
   // update carousel
@@ -50,17 +59,33 @@ const updateGallery = (event) => {
 
   const sign = event.target.innerText;
 
-  carousel.classList.add("hidden");
-  setTimeout(() => {
+  if (isSliding === false) {
+    isSliding = true;
+
     if (sign === "‹") {
       carousel.insertBefore(lastChild, firstChild);
+      carousel.style.transform = `translateX(${-655}px)`;
+      setTimeout(() => {
+        carousel.classList.add("slide");
+        carousel.style.transform = `translateX(${655}px)`;
+      }, 1);
+      setTimeout(() => {
+        resetTransform();
+      }, 1000);
     } else if (sign === "›") {
-      carousel.insertBefore(firstChild, lastChild.nextSibling);
+      carousel.classList.add("slide");
+      carousel.style.transform = `translateX(${-655}px)`;
+      setTimeout(() => {
+        carousel.insertBefore(firstChild, lastChild.nextSibling);
+        resetTransform();
+      }, 1000);
     }
-    carousel.classList.remove("hidden");
 
-    updateTabs(carousel);
-  }, 100);
+    setTimeout(() => {
+      isSliding = false;
+      updateTabs(carousel);
+    }, 1100);
+  }
 };
 
 const updateTabs = (carousel) => {
@@ -111,6 +136,7 @@ tabsButtons.forEach((button, idx) => {
 });
 
 const playGallery = () => {
+  // while play=play/stop=stop
   // let index = 0;
   // const carousel = document.querySelector(".carousel-flex-list");
   // const totalSlides = Array.from(carousel.children);
